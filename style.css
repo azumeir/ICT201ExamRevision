@@ -1,0 +1,43 @@
+/* Reset & basics */
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+body { background: #f4f6f8; color: #333; line-height: 1.5; }
+
+.container { max-width: 900px; margin: auto; padding: 20px; }
+.screen { display: none; }
+.screen.active { display: block; }
+
+h1, h2, h3, h4 { margin-bottom: 10px; }
+
+/* Cards */
+.card { background: #fff; border-radius: 8px; margin: 15px 0; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+.card__body { padding: 20px; }
+
+/* Buttons */
+.btn { padding: 10px 20px; border-radius: 5px; cursor: pointer; border: none; font-size: 16px; }
+.btn--primary { background: #3f51b5; color: #fff; }
+.btn--outline { background: transparent; border: 2px solid #3f51b5; color: #3f51b5; }
+.btn--lg { font-size: 18px; padding: 12px 25px; }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* Topic chips */
+.topic-chip {
+    background: #e0e0e0;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin: 5px;
+    display: inline-block;
+}
+
+/* Progress bar */
+.progress-bar { background: #ddd; height: 10px; border-radius: 5px; overflow: hidden; margin: 10px 0; }
+.progress-fill { background: #3f51b5; height: 100%; width: 0; transition: width 0.3s ease; }
+
+/* Score */
+.score-display, .score-display-large { font-weight: bold; }
+
+/* Feedback */
+.feedback-container.correct { border-left: 5px solid green; }
+.feedback-container.incorrect { border-left: 5px solid red; }
+
+/* Hidden utility */
+.hidden { display: none; }

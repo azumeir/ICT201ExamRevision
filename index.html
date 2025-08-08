@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ICT206 Intelligent Systems - Practice Exam</title>
+<link rel="stylesheet" href="[style.css](https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/b5d030eb29619d6cf1db413f22429a61/4fab4a98-510f-4edc-ab4e-7be845c23d72/style.css)">
+</head>
+<body>
+<!-- Welcome Screen -->
+<div id="welcome-screen" class="screen active">
+<div class="container">
+<div class="welcome-content">
+<h1>ICT206 Intelligent Systems</h1>
+<h2>Practice Exam Quiz</h2>
+<div class="exam-info card">
+<div class="card__body">
+<h3>Exam Overview</h3>
+<ul>
+<li><strong>Questions:</strong> 60+ Multiple Choice Questions</li>
+<li><strong>Topics:</strong> All ICT206 course topics covered</li>
+<li><strong>Format:</strong> 5 options per question (A, B, C, D, E)</li>
+<li><strong>Features:</strong> Immediate feedback with explanations</li>
+<li><strong>Time:</strong> Self-paced (optional timer available)</li>
+</ul>
+<h4>Topics Covered:</h4>
+<div class="topics-grid">
+<span class="topic-chip">Introduction to AI</span>
+<span class="topic-chip">Expert Systems</span>
+<span class="topic-chip">Neural Networks</span>
+<span class="topic-chip">Fuzzy Logic</span>
+<span class="topic-chip">Genetic Algorithms</span>
+<span class="topic-chip">Data Mining</span>
+<span class="topic-chip">Intelligent Agents</span>
+<span class="topic-chip">State Machines</span>
+<span class="topic-chip">Ethics in AI</span>
+<span class="topic-chip">Natural Language Processing</span>
+<span class="topic-chip">Search & Representation</span>
+<span class="topic-chip">Evaluation Methods</span>
+</div>
+</div>
+</div>
+<div class="timer-option">
+<label class="checkbox-label">
+<input type="checkbox" id="enable-timer">
+Enable 90-minute timer
+</label>
+</div>
+<button class="btn btn--primary btn--lg" onclick="startQuiz()">Start Practice Exam</button>
+</div>
+</div>
+</div>
+<!-- Quiz Screen -->
+<div id="quiz-screen" class="screen">
+<div class="container">
+<div class="quiz-header">
+<div class="progress-info">
+<span id="question-counter">Question 1 of 60</span>
+<div class="timer" id="timer-display" style="display: none;">
+<span>Time: </span><span id="time-remaining">90:00</span>
+</div>
+</div>
+<div class="progress-bar">
+<div class="progress-fill" id="progress-fill"></div>
+</div>
+<div class="score-display">
+Score: <span id="current-score">0</span>/<span id="total-attempted">0</span>
+(<span id="score-percentage">0%</span>)
+</div>
+</div>
+<div class="question-container card">
+<div class="card__body">
+<div class="question-topic">
+<span class="topic-badge" id="question-topic"></span>
+</div>
+<h3 id="question-text"></h3>
+<div class="options-container" id="options-container">
+<!-- Options will be populated by JavaScript -->
+</div>
+</div>
+</div>
+<div class="feedback-container card hidden" id="feedback-container">
+<div class="card__body">
+<div class="feedback-header">
+<span class="feedback-result" id="feedback-result"></span>
+</div>
+<div class="feedback-explanation" id="feedback-explanation"></div>
+</div>
+</div>
+<div class="navigation-buttons">
+<button class="btn btn--outline" id="prev-btn" onclick="previousQuestion()" disabled>Previous</button>
+<button class="btn btn--primary" id="next-btn" onclick="nextQuestion()" disabled>Next Question</button>
+<button class="btn btn--primary hidden" id="finish-btn" onclick="finishQuiz()">Finish Quiz</button>
+</div>
+</div>
+</div>
+<!-- Results Screen -->
+<div id="results-screen" class="screen">
+<div class="container">
+<div class="results-content">
+<h1>Quiz Complete!</h1>
+<div class="final-score card">
+<div class="card__body">
+<h2>Your Final Score</h2>
+<div class="score-display-large">
+<span id="final-score">0</span>/<span id="total-questions">60</span>
+<div class="percentage">(<span id="final-percentage">0%</span>)</div>
+</div>
+<div class="score-grade" id="score-grade"></div>
+</div>
+</div>
+<div class="topic-breakdown card">
+<div class="card__body">
+<h3>Performance by Topic</h3>
+<div id="topic-performance"></div>
+</div>
+</div>
+<div class="action-buttons">
+<button class="btn btn--primary" onclick="reviewAnswers()">Review Answers</button>
+<button class="btn btn--outline" onclick="restartQuiz()">Restart Quiz</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Review Screen -->
+<div id="review-screen" class="screen">
+<div class="container">
+<div class="review-header">
+<h2>Answer Review</h2>
+<button class="btn btn--outline" onclick="backToResults()">Back to Results</button>
+</div>
+<div id="review-content">
+<!-- Review content will be populated by JavaScript -->
+</div>
+</div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
